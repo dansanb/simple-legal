@@ -9,15 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Models/BaseModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/CaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/CaseEntityNote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/CaseEntityRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/CaseEntityStatusRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/CasePartyTag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/CasePartyTagRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/PartyEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +53,13 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.API: http">
@@ -99,8 +101,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
-      <workItem from="1753468888524" duration="6519000" />
+      <workItem from="1753468888524" duration="11860000" />
     </task>
+    <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
+      <option name="closed" value="true" />
+      <created>1753477145767</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1753477145767</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +121,8 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -128,5 +141,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

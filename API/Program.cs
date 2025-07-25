@@ -6,7 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
-builder.Services.AddSqlite<AppDbContext>("File=Database.db");
+builder.Services.AddCors();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddNpgsql<AppDbContext>(
+    connectionString: builder.Configuration.GetConnectionString("DefaultConnection"));
 
 var app = builder.Build();
 
