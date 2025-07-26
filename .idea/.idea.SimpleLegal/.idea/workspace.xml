@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.README.md.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "dansanb"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:dansanb/simple-legal.git",
+    "accountId": "ec35d892-543e-4f69-8b18-1aca1c0016ad"
+  }
+}]]></component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
@@ -122,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
-      <workItem from="1753468888524" duration="19191000" />
+      <workItem from="1753468888524" duration="21299000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -156,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753501421414</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created skeleton seeder static classes. &#10;&#10;Modified program to call the seeder classes in the correct order.">
+      <option name="closed" value="true" />
+      <created>1753502828445</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753502828445</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +191,8 @@
     <MESSAGE value="Installed Npgsql Entity Framework package.&#10;Add default postgresql connection string to appsettings.Development.json&#10;&#10;add default sql values to models for DateCreated field." />
     <MESSAGE value="Add migration to create a postgresql function 'set_updated_timestamp' which updates the DateUpdated field with the current timestamp.&#10;&#10;Add migration to create update trigger 'update_timestamp_trigger' on all tables.&#10;&#10;Add migration to fix 'set_updated_timestamp' postgresql function." />
     <MESSAGE value="Add DbSeeder project to the solution.&#10;&#10;Implement basic program Main() function to use the Core AppDbContext." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add DbSeeder project to the solution.&#10;&#10;Implement basic program Main() function to use the Core AppDbContext." />
+    <MESSAGE value="Created skeleton seeder static classes. &#10;&#10;Modified program to call the seeder classes in the correct order." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created skeleton seeder static classes. &#10;&#10;Modified program to call the seeder classes in the correct order." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
