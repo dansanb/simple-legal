@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{66CEE830-4E92-4664-9C00-E2DDE3F30404}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbSeeder", "DbSeeder\DbSeeder.csproj", "{3C9776F1-2384-42F9-9B72-51594855B3D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{66CEE830-4E92-4664-9C00-E2DDE3F30404}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CEE830-4E92-4664-9C00-E2DDE3F30404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CEE830-4E92-4664-9C00-E2DDE3F30404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9776F1-2384-42F9-9B72-51594855B3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9776F1-2384-42F9-9B72-51594855B3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9776F1-2384-42F9-9B72-51594855B3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9776F1-2384-42F9-9B72-51594855B3D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
