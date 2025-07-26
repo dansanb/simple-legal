@@ -16,19 +16,18 @@ class Program
         {
             // seed all the roles first
             var caseRoles = CaseRolesSeeder.Seed(context);
-            var caseStatusRoles = CaseStatusRolesSeeder.Seed(context);
+            var caseStatusRoles = CaseStatusRolesSeeder.Seed(context, caseRoles);
             var partyRoles = PartyRolesSeeder.Seed(context);
             var casePartyTagRoles = CasePartyTagRolesSeeder.Seed(context);
 
             // create some parties
             var parties = PartySeeder.Seed(context, partyRoles);
-
-            // create cases
-            var cases = CaseSeeder.Seed(context, caseRoles, caseStatusRoles, parties, casePartyTagRoles);
-
-            // add notes to cases
-            var notes = CaseNotesSeeder.Seed(context, cases);
-
+            //
+            // // create cases
+            // var cases = CaseSeeder.Seed(context, caseRoles, caseStatusRoles, parties, casePartyTagRoles);
+            //
+            // // add notes to cases
+            // var notes = CaseNotesSeeder.Seed(context, cases);
         }
     }
 }

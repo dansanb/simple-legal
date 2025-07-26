@@ -10,7 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250726073913_PartyEntityMakeFieldsNullable.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250726073913_PartyEntityMakeFieldsNullable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Models/PartyEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/PartyEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/DbSeeder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/DbSeeder.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CasePartyTagRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CasePartyTagRolesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartyRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartyRolesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.API: http.executor": "Run",
+    ".NET Project.DbSeeder.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
@@ -70,7 +82,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.API: http">
+  <component name="RunManager" selected=".NET Project.DbSeeder">
     <configuration name="DbSeeder" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -132,7 +144,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
-      <workItem from="1753468888524" duration="23048000" />
+      <workItem from="1753468888524" duration="28351000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -190,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753504840101</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implement constructor for BaseModel.cs, which sets the Id to a new Guid.">
+      <option name="closed" value="true" />
+      <created>1753511674458</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753511674458</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +228,8 @@
     <MESSAGE value="Created skeleton seeder static classes. &#10;&#10;Modified program to call the seeder classes in the correct order." />
     <MESSAGE value="Add basic README.md" />
     <MESSAGE value="Fix README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix README.md" />
+    <MESSAGE value="Implement constructor for BaseModel.cs, which sets the Id to a new Guid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement constructor for BaseModel.cs, which sets the Id to a new Guid." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
