@@ -1,6 +1,7 @@
 using Bogus;
 using Core;
 using Core.Models;
+using DbSeeder.TestEntitiesGenerators;
 
 namespace DbSeeder.Seeders;
 
@@ -11,54 +12,12 @@ public static class PartySeeder
         var parties = new List<PartyEntity>();
         var random = new Random();
 
-        var testCourt = new Faker<PartyEntity>()
-            .RuleFor(o => o.Company, f => $"Court of {f.Address.County()}")
-            .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
-            .RuleFor(o => o.Address, f => f.Address.StreetAddress())
-            .RuleFor(o => o.City, f => f.Address.City())
-            .RuleFor(o => o.State, f => f.Address.State());
-
-        var testServer = new Faker<PartyEntity>()
-            .RuleFor(o => o.Company, f => $"{f.Company.CompanyName()} Process Servers")
-            .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
-            .RuleFor(o => o.Address, f => f.Address.StreetAddress())
-            .RuleFor(o => o.City, f => f.Address.City())
-            .RuleFor(o => o.State, f => f.Address.State());
-
-        var testSheriff = new Faker<PartyEntity>()
-            .RuleFor(o => o.Company, f => $"{f.Address.County()} Sheriffs Department")
-            .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
-            .RuleFor(o => o.Address, f => f.Address.StreetAddress())
-            .RuleFor(o => o.City, f => f.Address.City())
-            .RuleFor(o => o.State, f => f.Address.State());
-
-        var testLawFirm = new Faker<PartyEntity>()
-            .RuleFor(o => o.Company, f => $"{f.Name.LastName()} Law Firm")
-            .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
-            .RuleFor(o => o.Address, f => f.Address.StreetAddress())
-            .RuleFor(o => o.City, f => f.Address.City())
-            .RuleFor(o => o.State, f => f.Address.State());
-
-        var testPerson = new Faker<PartyEntity>()
-            .RuleFor(o => o.FirstName, f => f.Person.FirstName)
-            .RuleFor(o => o.LastName, f => f.Person.LastName)
-            .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
-            .RuleFor(o => o.Address, f => f.Address.StreetAddress())
-            .RuleFor(o => o.City, f => f.Address.City())
-            .RuleFor(o => o.State, f => f.Address.State());
-
-        var testCompany = new Faker<PartyEntity>()
-            .RuleFor(o => o.Company, f => f.Company.CompanyName())
-            .RuleFor(o => o.Email, f => f.Internet.Email())
-            .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
-            .RuleFor(o => o.Address, f => f.Address.StreetAddress())
-            .RuleFor(o => o.City, f => f.Address.City())
-            .RuleFor(o => o.State, f => f.Address.State());
+        var courtGenerator = new CourtEntityGenerator();
+        var processServerGenerator = new ProcessServerEntityGenerator();
+        var sheriffGenerator = new SheriffEntityGenerator();
+        var lawFirmGenerator = new LawFirmEntityGenerator();
+        var personGenerator = new PersonEntityGenerator();
+        var companyGenerator = new CompanyEntityGenerator();
 
 
         foreach (var partyRole in partyRoles)
@@ -69,22 +28,22 @@ public static class PartySeeder
                 switch (partyRole.Name)
                 {
                     case "Court":
-                        party = testCourt.Generate();
+                        party = courtGenerator.Generate();
                         break;
                     case "Process Server":
-                        party = testServer.Generate();
+                        party = processServerGenerator.Generate();
                         break;
                     case "Sheriff":
-                        party = testSheriff.Generate();
+                        party = sheriffGenerator.Generate();
                         break;
                     case "Law Firm":
-                        party = testSheriff.Generate();
+                        party = lawFirmGenerator.Generate();
                         break;
                     default:
-                        party = testCompany.Generate();
+                        party = companyGenerator.Generate();
                         if (random.Next(2) == 0)
                         {
-                            party = testPerson.Generate();
+                            party = personGenerator.Generate();
                         }
                         break;
                 }

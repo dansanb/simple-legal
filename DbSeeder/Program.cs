@@ -23,8 +23,8 @@ class Program
             // create some parties
             var parties = PartySeeder.Seed(context, partyRoles);
             //
-            // // create cases
-            // var cases = CaseSeeder.Seed(context, caseRoles, caseStatusRoles, parties, casePartyTagRoles);
+            // create cases
+            var cases = CaseSeeder.Seed(context, caseRoles, caseStatusRoles, parties, casePartyTagRoles);
             //
             // // add notes to cases
             // var notes = CaseNotesSeeder.Seed(context, cases);
