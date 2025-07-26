@@ -1,7 +1,7 @@
 # SimpleLegal
 
 A simple legal case management system built with:
-* .NET Core Web API and Entity Framework backend
+* .NET 9, Web API and Entity Framework backend
 * Angular, Material and Tailwind frontend
 * PostgreSQL database.
 
