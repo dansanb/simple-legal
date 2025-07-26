@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleLegal.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleLegal.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -121,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
-      <workItem from="1753468888524" duration="17927000" />
+      <workItem from="1753468888524" duration="19191000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -147,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753500104504</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add DbSeeder project to the solution.&#10;&#10;Implement basic program Main() function to use the Core AppDbContext.">
+      <option name="closed" value="true" />
+      <created>1753501421414</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753501421414</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,11 +165,13 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic." />
     <MESSAGE value="Installed Npgsql Entity Framework package.&#10;Add default postgresql connection string to appsettings.Development.json&#10;&#10;add default sql values to models for DateCreated field." />
     <MESSAGE value="Add migration to create a postgresql function 'set_updated_timestamp' which updates the DateUpdated field with the current timestamp.&#10;&#10;Add migration to create update trigger 'update_timestamp_trigger' on all tables.&#10;&#10;Add migration to fix 'set_updated_timestamp' postgresql function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add migration to create a postgresql function 'set_updated_timestamp' which updates the DateUpdated field with the current timestamp.&#10;&#10;Add migration to create update trigger 'update_timestamp_trigger' on all tables.&#10;&#10;Add migration to fix 'set_updated_timestamp' postgresql function." />
+    <MESSAGE value="Add DbSeeder project to the solution.&#10;&#10;Implement basic program Main() function to use the Core AppDbContext." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add DbSeeder project to the solution.&#10;&#10;Implement basic program Main() function to use the Core AppDbContext." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
