@@ -5,19 +5,62 @@ namespace DbSeeder.Seeders;
 
 public static class CaseSeeder
 {
-    public static List<CaseEntity> Seed(AppDbContext context, List<CaseEntityRole> caseRoles,
-        List<CaseEntityStatusRole> caseStatusRoles, List<PartyEntity> parties, List<CasePartyTagRole> casePartyTagRoles)
+    public static readonly List<CaseEntity> Cases = new List<CaseEntity>();
+    private static readonly Random Random = new Random();
+
+    public static void Seed(AppDbContext context)
     {
-        throw new NotImplementedException();
-        // var random = new Random();
-        //
-        // foreach (var caseRole in caseRoles)
-        // {
-        //     for (int i = 0; i < random.Next(3, 10); i++)
-        //     {
-        //
-        //     }
-        //
-        // }
+        int minCasesOfEachType = 5;
+        int maxCasesOfEachType = 10;
+        var random = new Random();
+
+        // create "random" amount of each case type
+        foreach (var caseRole in CaseRolesSeeder.CaseRoles)
+        {
+            for (int i = 0; i < random.Next(minCasesOfEachType, maxCasesOfEachType); i++)
+            {
+                var caseEntity = new CaseEntity();
+                caseEntity.Role = caseRole;
+                caseEntity.StatusCode =
+                    CaseStatusRolesSeeder.CaseStatusRoles.ElementAt(random.Next(0, CaseRolesSeeder.CaseRoles.Count));
+
+                // add basic Party tag roles
+                List<CasePartyTag> tags = new List<CasePartyTag>();
+
+                // plaintiff
+                var plaintiff = new CasePartyTag(caseEntity, Helper.GetCompanyOrPerson(),
+                    PartyRolesSeeder.PlaintiffPartyRole);
+                tags.Add(plaintiff);
+
+                // defendant
+                var defendant = new CasePartyTag(caseEntity, Helper.GetCompanyOrPerson(),
+                    PartyRolesSeeder.DefendantPartyRole);
+                tags.Add(defendant);
+
+                // court
+                tags.Add(new CasePartyTag(caseEntity, Helper.GetRandomParty(PartySeeder.Courts),
+                    PartyRolesSeeder.CourtPartyRole));
+
+                // attorneys
+                tags.Add(new CasePartyTag(caseEntity, Helper.GetRandomParty(PartySeeder.People),
+                    PartyRolesSeeder.AttorneyPartyRole));
+
+                // opposing counsel
+                tags.Add(new CasePartyTag(caseEntity, Helper.GetRandomParty(PartySeeder.LawFirms),
+                    PartyRolesSeeder.OpposingCouncilPartyRole));
+
+                // process server
+                tags.Add(new CasePartyTag(caseEntity, Helper.GetRandomParty(PartySeeder.ProcessServers),
+                    PartyRolesSeeder.ProcessServerPartyRole));
+
+                caseEntity.Parties = tags;
+
+                // give case a name of "Plaintiff v Defendant"
+                caseEntity.Name = $"{plaintiff.CaseEntity.Name} v {defendant.CaseEntity.Name}";
+
+                Cases.Add(caseEntity);
+                context.Add(caseEntity);
+            }
+        }
     }
 }

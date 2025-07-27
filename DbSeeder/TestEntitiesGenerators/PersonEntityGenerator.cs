@@ -1,5 +1,6 @@
 using Bogus;
 using Core.Models;
+using DbSeeder.Seeders;
 
 namespace DbSeeder.TestEntitiesGenerators;
 
@@ -7,7 +8,13 @@ public class PersonEntityGenerator : AbstractPartyGenerator
 {
     public PersonEntityGenerator()
     {
+        List<PartyEntityRole> possibleRoles = new List<PartyEntityRole>(
+        [
+            PartyRolesSeeder.PlaintiffPartyRole,
+            PartyRolesSeeder.DefendantPartyRole,
+        ]);
         this._mockPartyEntity = new Faker<PartyEntity>()
+            .RuleFor(o => o.Role, f => f.PickRandom(possibleRoles))
             .RuleFor(o => o.FirstName, f => f.Person.FirstName)
             .RuleFor(o => o.LastName, f => f.Person.LastName)
             .RuleFor(o => o.Email, f => f.Internet.Email())

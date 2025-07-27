@@ -10,17 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/AbstractEntityGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727181457_RemoveCasePartyTagRole.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727181457_RemoveCasePartyTagRole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727210107_AddCaseEntityToCaseEntityNote.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727210107_AddCaseEntityToCaseEntityNote.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CaseNoteGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/Helper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SimpleLegal.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Models/CaseEntityNote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/CaseEntityNote.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Models/CasePartyTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/CasePartyTag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Models/CasePartyTagRole.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DbSeeder/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseNotesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseNotesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CasePartyTagRolesSeeder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartyRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartyRolesSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,22 +50,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "dansanb"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dansanb&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:dansanb/simple-legal.git",
-    "accountId": "ec35d892-543e-4f69-8b18-1aca1c0016ad"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:dansanb/simple-legal.git&quot;,
+    &quot;accountId&quot;: &quot;ec35d892-543e-4f69-8b18-1aca1c0016ad&quot;
   }
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/73818f6b3d53151bdbd8dd951124e66e5e96c4f2c9dfa64e772927864abfc61c/Lorem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0b45f29f34f594814a7b1fbc25fe5ef3c18257956ed4f4fbfa68717db58/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="30NXDw3OuwEeaHNs86jHY8ql2km" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,29 +79,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.API: http.executor": "Run",
-    ".NET Project.DbSeeder.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.API: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.DbSeeder.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.DbSeeder">
     <configuration name="DbSeeder" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -143,7 +164,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
-      <workItem from="1753468888524" duration="31730000" />
+      <workItem from="1753468888524" duration="45849000" />
+      <workItem from="1753639387489" duration="3852000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -217,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753517000492</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Extracted Sheriff, and other Party Entities out of PartySeeder.cs and refactored them into their own Generator classes.">
+      <option name="closed" value="true" />
+      <created>1753550840766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753550840766</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +267,8 @@
     <MESSAGE value="Fix README.md" />
     <MESSAGE value="Implement constructor for BaseModel.cs, which sets the Id to a new Guid." />
     <MESSAGE value="Add migration to make fields in PartyEntity.cs nullable.&#10;&#10;Add Bogus (Faker) library to project DbSeeder.csproj to seed database with Fake Data.&#10;&#10;Implement Seeder in CaseRolesSeeder.cs.&#10;Implement Seeder in CaseStatusRolesSeeder.cs&#10;Implement Seeder in PartyRolesSeeder.cs&#10;Implement Seeder in CasePartyTagRolesSeeder.cs&#10;Implement Seeder in PartySeeder.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add migration to make fields in PartyEntity.cs nullable.&#10;&#10;Add Bogus (Faker) library to project DbSeeder.csproj to seed database with Fake Data.&#10;&#10;Implement Seeder in CaseRolesSeeder.cs.&#10;Implement Seeder in CaseStatusRolesSeeder.cs&#10;Implement Seeder in PartyRolesSeeder.cs&#10;Implement Seeder in CasePartyTagRolesSeeder.cs&#10;Implement Seeder in PartySeeder.cs" />
+    <MESSAGE value="Extracted Sheriff, and other Party Entities out of PartySeeder.cs and refactored them into their own Generator classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted Sheriff, and other Party Entities out of PartySeeder.cs and refactored them into their own Generator classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,9 +5,9 @@ namespace DbSeeder.Seeders;
 
 public static class CaseRolesSeeder
 {
-    public static List<CaseEntityRole> Seed(AppDbContext context)
+    public static readonly List<CaseEntityRole> CaseRoles = new List<CaseEntityRole>();
+    public static void Seed(AppDbContext context)
     {
-        List<CaseEntityRole> caseEntityRoles = new List<CaseEntityRole>();
         string[] roles = { "Family Law", "Small Claims", "Criminal", "Property Law" };
 
         foreach (var role in roles)
@@ -15,10 +15,9 @@ public static class CaseRolesSeeder
             var caseRole = new CaseEntityRole();
             caseRole.Name = role;
             context.Add(caseRole);
-            caseEntityRoles.Add(caseRole);
+            CaseRoles.Add(caseRole);
         }
 
         context.SaveChanges();
-        return caseEntityRoles;
     }
 }

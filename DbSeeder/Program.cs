@@ -12,22 +12,29 @@ class Program
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
         optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=simplelegal;Username=postgres");
 
+        // Note: seeding has to be performed in the correct order because:
+        //  - Records depend on other records to exists first.
+        //  - Records need access to previously created records to
+        //    create relationships.
+        //
+        // To make seeding easier, each entity seeder is a static class
+        // with public lists of created entities so that other seeders
+        // have access to previously created records.
         using (var context = new AppDbContext(optionsBuilder.Options))
         {
             // seed all the roles first
-            var caseRoles = CaseRolesSeeder.Seed(context);
-            var caseStatusRoles = CaseStatusRolesSeeder.Seed(context, caseRoles);
-            var partyRoles = PartyRolesSeeder.Seed(context);
-            var casePartyTagRoles = CasePartyTagRolesSeeder.Seed(context);
+            CaseRolesSeeder.Seed(context);
+            CaseStatusRolesSeeder.Seed(context);
+            PartyRolesSeeder.Seed(context);
 
             // create some parties
-            var parties = PartySeeder.Seed(context, partyRoles);
-            //
+            PartySeeder.Seed(context);
+
             // create cases
-            var cases = CaseSeeder.Seed(context, caseRoles, caseStatusRoles, parties, casePartyTagRoles);
-            //
-            // // add notes to cases
-            // var notes = CaseNotesSeeder.Seed(context, cases);
+            CaseSeeder.Seed(context);
+
+            // add notes to cases
+            CaseNotesSeeder.Seed(context);
         }
     }
 }

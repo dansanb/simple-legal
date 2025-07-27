@@ -3,6 +3,7 @@ using System;
 using Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Core.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250727181457_RemoveCasePartyTagRole")]
+    partial class RemoveCasePartyTagRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,7 +64,7 @@ namespace Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("CaseEntityId")
+                    b.Property<Guid?>("CaseEntityId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("DateCreated")
@@ -261,13 +264,9 @@ namespace Core.Migrations
 
             modelBuilder.Entity("Core.Models.CaseEntityNote", b =>
                 {
-                    b.HasOne("Core.Models.CaseEntity", "CaseEntity")
+                    b.HasOne("Core.Models.CaseEntity", null)
                         .WithMany("Notes")
-                        .HasForeignKey("CaseEntityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CaseEntity");
+                        .HasForeignKey("CaseEntityId");
                 });
 
             modelBuilder.Entity("Core.Models.CaseEntityStatusRole", b =>

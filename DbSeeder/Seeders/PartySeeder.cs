@@ -7,10 +7,18 @@ namespace DbSeeder.Seeders;
 
 public static class PartySeeder
 {
-    public static List<PartyEntity> Seed(AppDbContext context, List<PartyEntityRole> partyRoles)
+    public static readonly List<PartyEntity> Courts = new List<PartyEntity>();
+    public static readonly List<PartyEntity> ProcessServers = new List<PartyEntity>();
+    public static readonly List<PartyEntity> Sheriffs = new List<PartyEntity>();
+    public static readonly List<PartyEntity> LawFirms = new List<PartyEntity>();
+    public static readonly List<PartyEntity> People = new List<PartyEntity>();
+    public static readonly List<PartyEntity> Companies = new List<PartyEntity>();
+
+    public static void Seed(AppDbContext context)
     {
-        var parties = new List<PartyEntity>();
         var random = new Random();
+        int minPartiesOfEachType = 8;
+        int maxPartiesOfEachType = 15;
 
         var courtGenerator = new CourtEntityGenerator();
         var processServerGenerator = new ProcessServerEntityGenerator();
@@ -19,42 +27,54 @@ public static class PartySeeder
         var personGenerator = new PersonEntityGenerator();
         var companyGenerator = new CompanyEntityGenerator();
 
-
-        foreach (var partyRole in partyRoles)
+        // courts
+        for (int i = 0; i < random.Next(minPartiesOfEachType, maxPartiesOfEachType); i++)
         {
-            var party = new PartyEntity();
-            for (int i=0; i < random.Next(10, 20); i++)
-            {
-                switch (partyRole.Name)
-                {
-                    case "Court":
-                        party = courtGenerator.Generate();
-                        break;
-                    case "Process Server":
-                        party = processServerGenerator.Generate();
-                        break;
-                    case "Sheriff":
-                        party = sheriffGenerator.Generate();
-                        break;
-                    case "Law Firm":
-                        party = lawFirmGenerator.Generate();
-                        break;
-                    default:
-                        party = companyGenerator.Generate();
-                        if (random.Next(2) == 0)
-                        {
-                            party = personGenerator.Generate();
-                        }
-                        break;
-                }
+            var party = courtGenerator.Generate();
+            context.Add(party);
+            Courts.Add(party);
+        }
 
-                party.Role = partyRole;
-                parties.Add(party);
-                context.Add(party);
-            }
+        // process servers
+        for (int i = 0; i < random.Next(minPartiesOfEachType, maxPartiesOfEachType); i++)
+        {
+            var party = processServerGenerator.Generate();
+            context.Add(party);
+            ProcessServers.Add(party);
+        }
+
+        // sheriffs
+        for (int i = 0; i < random.Next(minPartiesOfEachType, maxPartiesOfEachType); i++)
+        {
+            var party = sheriffGenerator.Generate();
+            context.Add(party);
+            Sheriffs.Add(party);
+        }
+
+        // law firms
+        for (int i = 0; i < random.Next(minPartiesOfEachType, maxPartiesOfEachType); i++)
+        {
+            var party = lawFirmGenerator.Generate();
+            context.Add(party);
+            LawFirms.Add(party);
+        }
+
+        // individuals
+        for (int i = 0; i < random.Next(minPartiesOfEachType, maxPartiesOfEachType); i++)
+        {
+            var party = personGenerator.Generate();
+            context.Add(party);
+            People.Add(party);
+        }
+
+        // companies
+        for (int i = 0; i < random.Next(minPartiesOfEachType, maxPartiesOfEachType); i++)
+        {
+            var party = companyGenerator.Generate();
+            context.Add(party);
+            Companies.Add(party);
         }
 
         context.SaveChanges();
-        return parties;
     }
 }

@@ -6,13 +6,13 @@ namespace DbSeeder.Seeders;
 
 public static class CaseStatusRolesSeeder
 {
-    public static List<CaseEntityStatusRole> Seed(AppDbContext context, List<CaseEntityRole> caseRoles)
+    public static readonly List<CaseEntityStatusRole> CaseStatusRoles = new List<CaseEntityStatusRole>();
+    public static void Seed(AppDbContext context)
     {
-        var caseEntityStatusRoles = new List<CaseEntityStatusRole>();
         var codes = new[]
             { "Filed", "Discovery", "Answer", "Active", "Dismissed", "Settled", "Appeal", "Judgment", "Complete" };
 
-        foreach (var caseRole in caseRoles)
+        foreach (var caseRole in CaseRolesSeeder.CaseRoles)
         {
             foreach (var code in codes)
             {
@@ -22,12 +22,9 @@ public static class CaseStatusRolesSeeder
                     Role = caseRole
                 };
                 context.Add(statusRole);
-                caseEntityStatusRoles.Add(statusRole);
+                CaseStatusRoles.Add(statusRole);
             }
         }
-
         context.SaveChanges();
-
-        return caseEntityStatusRoles;
     }
 }

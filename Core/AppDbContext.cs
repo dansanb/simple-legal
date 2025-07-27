@@ -10,7 +10,6 @@ public class AppDbContext : DbContext
     DbSet<CaseEntityNote> CaseNotes { get; set; }
     DbSet<CaseEntityStatusRole> CaseStatusRoles { get; set; }
     DbSet<CasePartyTag> CasePartyTags { get; set; }
-    DbSet<CasePartyTagRole> CasePartyTagRoles { get; set; }
     DbSet<PartyEntity> Parties { get; set; }
     DbSet<PartyEntityRole> PartyRoles { get; set; }
 
@@ -38,10 +37,6 @@ public class AppDbContext : DbContext
             .HasDefaultValueSql(sqlDateCreatedFunction);
 
         modelBuilder.Entity<CasePartyTag>()
-            .Property(p => p.DateCreated)
-            .HasDefaultValueSql(sqlDateCreatedFunction);
-
-        modelBuilder.Entity<CasePartyTagRole>()
             .Property(p => p.DateCreated)
             .HasDefaultValueSql(sqlDateCreatedFunction);
 

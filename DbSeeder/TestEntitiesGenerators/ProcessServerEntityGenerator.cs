@@ -1,5 +1,6 @@
 using Bogus;
 using Core.Models;
+using DbSeeder.Seeders;
 
 namespace DbSeeder.TestEntitiesGenerators;
 
@@ -8,6 +9,7 @@ public class ProcessServerEntityGenerator : AbstractPartyGenerator
     public ProcessServerEntityGenerator()
     {
         this._mockPartyEntity = new Faker<PartyEntity>()
+            .RuleFor(o => o.Role, PartyRolesSeeder.ProcessServerPartyRole)
             .RuleFor(o => o.Company, f => $"{f.Company.CompanyName()} Process Servers")
             .RuleFor(o => o.Email, f => f.Internet.Email())
             .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())
