@@ -10,13 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityNoteController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityRoleController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/CasePartyTagController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/PartyEntityController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/PartyEntityRoleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityNoteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityNoteController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityRoleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/CasePartyTagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CasePartyTagController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/PartyEntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/PartyEntityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/PartyEntityRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/PartyEntityRoleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
       <workItem from="1753468888524" duration="45849000" />
-      <workItem from="1753639387489" duration="8035000" />
+      <workItem from="1753639387489" duration="8931000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -245,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753654009935</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Generate Controller classes using aspnet-codegenerator tool:&#10;&#10;- CaseEntityController.cs&#10;- CaseEntityNoteController.cs&#10;- CaseEntityRoleController.cs&#10;- CaseEntityStatusRoleController.cs&#10;- CasePartyTagController.cs&#10;- PartyEntityController.cs&#10;- PartyEntityRoleController.cs">
+      <option name="closed" value="true" />
+      <created>1753654730805</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753654730805</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +278,8 @@
     <MESSAGE value="Extracted Sheriff, and other Party Entities out of PartySeeder.cs and refactored them into their own Generator classes." />
     <MESSAGE value="- Add migration which removes unnecessary models.&#10;&#10;- Add migration to fix CaseEntityNote.cs&#10;&#10;- Refactored Generators in DbSeeder to be static and have public properties to facilitate model relationships.&#10;&#10;- Create Helper.cs class to hold helper methods used by various model seeders.&#10;&#10;- Add SqlHelperScripts folder to hold raw sql scripts." />
     <MESSAGE value="- Add NuGet packages to support aspnet-codegenerator.&#10;&#10;- Make DbSet properties in AppDbContext.cs public.&#10;&#10;- Add DbSet model properties to use full name to make aspnet-codegenerator happy." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add NuGet packages to support aspnet-codegenerator.&#10;&#10;- Make DbSet properties in AppDbContext.cs public.&#10;&#10;- Add DbSet model properties to use full name to make aspnet-codegenerator happy." />
+    <MESSAGE value="- Generate Controller classes using aspnet-codegenerator tool:&#10;&#10;- CaseEntityController.cs&#10;- CaseEntityNoteController.cs&#10;- CaseEntityRoleController.cs&#10;- CaseEntityStatusRoleController.cs&#10;- CasePartyTagController.cs&#10;- PartyEntityController.cs&#10;- PartyEntityRoleController.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Generate Controller classes using aspnet-codegenerator tool:&#10;&#10;- CaseEntityController.cs&#10;- CaseEntityNoteController.cs&#10;- CaseEntityRoleController.cs&#10;- CaseEntityStatusRoleController.cs&#10;- CasePartyTagController.cs&#10;- PartyEntityController.cs&#10;- PartyEntityRoleController.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

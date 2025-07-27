@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Core;
 using Core.Models;
 
 namespace API.Controllers
 {
-    public class CaseEntityRoleController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CaseEntityRoleController : ControllerBase
     {
         private readonly AppDbContext _context;
 
@@ -19,135 +21,83 @@ namespace API.Controllers
             _context = context;
         }
 
-        // GET: CaseEntityRole
-        public async Task<IActionResult> Index()
+        // GET: api/CaseEntityRole
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CaseEntityRole>>> GetCaseRoles()
         {
-            return View(await _context.CaseRoles.ToListAsync());
+            return await _context.CaseRoles.ToListAsync();
         }
 
-        // GET: CaseEntityRole/Details/5
-        public async Task<IActionResult> Details(Guid? id)
+        // GET: api/CaseEntityRole/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CaseEntityRole>> GetCaseEntityRole(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var caseEntityRole = await _context.CaseRoles
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (caseEntityRole == null)
-            {
-                return NotFound();
-            }
-
-            return View(caseEntityRole);
-        }
-
-        // GET: CaseEntityRole/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CaseEntityRole/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Id,DateCreated,DateUpdated")] CaseEntityRole caseEntityRole)
-        {
-            if (ModelState.IsValid)
-            {
-                caseEntityRole.Id = Guid.NewGuid();
-                _context.Add(caseEntityRole);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(caseEntityRole);
-        }
-
-        // GET: CaseEntityRole/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var caseEntityRole = await _context.CaseRoles.FindAsync(id);
+
             if (caseEntityRole == null)
             {
                 return NotFound();
             }
-            return View(caseEntityRole);
+
+            return caseEntityRole;
         }
 
-        // POST: CaseEntityRole/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Name,Id,DateCreated,DateUpdated")] CaseEntityRole caseEntityRole)
+        // PUT: api/CaseEntityRole/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCaseEntityRole(Guid id, CaseEntityRole caseEntityRole)
         {
             if (id != caseEntityRole.Id)
             {
-                return NotFound();
+                return BadRequest();
             }
 
-            if (ModelState.IsValid)
+            _context.Entry(caseEntityRole).State = EntityState.Modified;
+
+            try
             {
-                try
-                {
-                    _context.Update(caseEntityRole);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CaseEntityRoleExists(caseEntityRole.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
             }
-            return View(caseEntityRole);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CaseEntityRoleExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
-        // GET: CaseEntityRole/Delete/5
-        public async Task<IActionResult> Delete(Guid? id)
+        // POST: api/CaseEntityRole
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<CaseEntityRole>> PostCaseEntityRole(CaseEntityRole caseEntityRole)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            _context.CaseRoles.Add(caseEntityRole);
+            await _context.SaveChangesAsync();
 
-            var caseEntityRole = await _context.CaseRoles
-                .FirstOrDefaultAsync(m => m.Id == id);
+            return CreatedAtAction("GetCaseEntityRole", new { id = caseEntityRole.Id }, caseEntityRole);
+        }
+
+        // DELETE: api/CaseEntityRole/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCaseEntityRole(Guid id)
+        {
+            var caseEntityRole = await _context.CaseRoles.FindAsync(id);
             if (caseEntityRole == null)
             {
                 return NotFound();
             }
 
-            return View(caseEntityRole);
-        }
-
-        // POST: CaseEntityRole/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
-        {
-            var caseEntityRole = await _context.CaseRoles.FindAsync(id);
-            if (caseEntityRole != null)
-            {
-                _context.CaseRoles.Remove(caseEntityRole);
-            }
-
+            _context.CaseRoles.Remove(caseEntityRole);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return NoContent();
         }
 
         private bool CaseEntityRoleExists(Guid id)

@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Core;
 using Core.Models;
 
 namespace API.Controllers
 {
-    public class CaseEntityNoteController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CaseEntityNoteController : ControllerBase
     {
         private readonly AppDbContext _context;
 
@@ -19,135 +21,83 @@ namespace API.Controllers
             _context = context;
         }
 
-        // GET: CaseEntityNote
-        public async Task<IActionResult> Index()
+        // GET: api/CaseEntityNote
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CaseEntityNote>>> GetCaseNotes()
         {
-            return View(await _context.CaseNotes.ToListAsync());
+            return await _context.CaseNotes.ToListAsync();
         }
 
-        // GET: CaseEntityNote/Details/5
-        public async Task<IActionResult> Details(Guid? id)
+        // GET: api/CaseEntityNote/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CaseEntityNote>> GetCaseEntityNote(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var caseEntityNote = await _context.CaseNotes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (caseEntityNote == null)
-            {
-                return NotFound();
-            }
-
-            return View(caseEntityNote);
-        }
-
-        // GET: CaseEntityNote/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CaseEntityNote/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Note,Id,DateCreated,DateUpdated")] CaseEntityNote caseEntityNote)
-        {
-            if (ModelState.IsValid)
-            {
-                caseEntityNote.Id = Guid.NewGuid();
-                _context.Add(caseEntityNote);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(caseEntityNote);
-        }
-
-        // GET: CaseEntityNote/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var caseEntityNote = await _context.CaseNotes.FindAsync(id);
+
             if (caseEntityNote == null)
             {
                 return NotFound();
             }
-            return View(caseEntityNote);
+
+            return caseEntityNote;
         }
 
-        // POST: CaseEntityNote/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Note,Id,DateCreated,DateUpdated")] CaseEntityNote caseEntityNote)
+        // PUT: api/CaseEntityNote/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCaseEntityNote(Guid id, CaseEntityNote caseEntityNote)
         {
             if (id != caseEntityNote.Id)
             {
-                return NotFound();
+                return BadRequest();
             }
 
-            if (ModelState.IsValid)
+            _context.Entry(caseEntityNote).State = EntityState.Modified;
+
+            try
             {
-                try
-                {
-                    _context.Update(caseEntityNote);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CaseEntityNoteExists(caseEntityNote.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
             }
-            return View(caseEntityNote);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CaseEntityNoteExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
-        // GET: CaseEntityNote/Delete/5
-        public async Task<IActionResult> Delete(Guid? id)
+        // POST: api/CaseEntityNote
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<CaseEntityNote>> PostCaseEntityNote(CaseEntityNote caseEntityNote)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            _context.CaseNotes.Add(caseEntityNote);
+            await _context.SaveChangesAsync();
 
-            var caseEntityNote = await _context.CaseNotes
-                .FirstOrDefaultAsync(m => m.Id == id);
+            return CreatedAtAction("GetCaseEntityNote", new { id = caseEntityNote.Id }, caseEntityNote);
+        }
+
+        // DELETE: api/CaseEntityNote/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCaseEntityNote(Guid id)
+        {
+            var caseEntityNote = await _context.CaseNotes.FindAsync(id);
             if (caseEntityNote == null)
             {
                 return NotFound();
             }
 
-            return View(caseEntityNote);
-        }
-
-        // POST: CaseEntityNote/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
-        {
-            var caseEntityNote = await _context.CaseNotes.FindAsync(id);
-            if (caseEntityNote != null)
-            {
-                _context.CaseNotes.Remove(caseEntityNote);
-            }
-
+            _context.CaseNotes.Remove(caseEntityNote);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return NoContent();
         }
 
         private bool CaseEntityNoteExists(Guid id)
