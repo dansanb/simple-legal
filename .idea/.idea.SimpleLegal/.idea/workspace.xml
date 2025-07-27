@@ -10,34 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727181457_RemoveCasePartyTagRole.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727181457_RemoveCasePartyTagRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727210107_AddCaseEntityToCaseEntityNote.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250727210107_AddCaseEntityToCaseEntityNote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CaseNoteGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/Helper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleLegal.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/CaseEntityNote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/CaseEntityNote.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/CasePartyTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/CasePartyTag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/CasePartyTagRole.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseNotesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseNotesSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CasePartyTagRolesSeeder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartyRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartyRolesSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleLegal.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleLegal.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +40,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cff58531c0f6ed75abfe1eff81ca50d7f23d56df16e019f0d1f642d67e572d/EndpointMethodInfoApiExplorerServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/73818f6b3d53151bdbd8dd951124e66e5e96c4f2c9dfa64e772927864abfc61c/Lorem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0b45f29f34f594814a7b1fbc25fe5ef3c18257956ed4f4fbfa68717db58/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -102,7 +80,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.DbSeeder">
+  <component name="RunManager" selected=".NET Launch Settings Profile.API: http">
     <configuration name="DbSeeder" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -165,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753468887507</updated>
       <workItem from="1753468888524" duration="45849000" />
-      <workItem from="1753639387489" duration="3852000" />
+      <workItem from="1753639387489" duration="7374000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -247,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753550840766</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- Add migration which removes unnecessary models.&#10;&#10;- Add migration to fix CaseEntityNote.cs&#10;&#10;- Refactored Generators in DbSeeder to be static and have public properties to facilitate model relationships.&#10;&#10;- Create Helper.cs class to hold helper methods used by various model seeders.&#10;&#10;- Add SqlHelperScripts folder to hold raw sql scripts.">
+      <option name="closed" value="true" />
+      <created>1753651018218</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753651018218</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +254,8 @@
     <MESSAGE value="Implement constructor for BaseModel.cs, which sets the Id to a new Guid." />
     <MESSAGE value="Add migration to make fields in PartyEntity.cs nullable.&#10;&#10;Add Bogus (Faker) library to project DbSeeder.csproj to seed database with Fake Data.&#10;&#10;Implement Seeder in CaseRolesSeeder.cs.&#10;Implement Seeder in CaseStatusRolesSeeder.cs&#10;Implement Seeder in PartyRolesSeeder.cs&#10;Implement Seeder in CasePartyTagRolesSeeder.cs&#10;Implement Seeder in PartySeeder.cs" />
     <MESSAGE value="Extracted Sheriff, and other Party Entities out of PartySeeder.cs and refactored them into their own Generator classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Extracted Sheriff, and other Party Entities out of PartySeeder.cs and refactored them into their own Generator classes." />
+    <MESSAGE value="- Add migration which removes unnecessary models.&#10;&#10;- Add migration to fix CaseEntityNote.cs&#10;&#10;- Refactored Generators in DbSeeder to be static and have public properties to facilitate model relationships.&#10;&#10;- Create Helper.cs class to hold helper methods used by various model seeders.&#10;&#10;- Add SqlHelperScripts folder to hold raw sql scripts." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add migration which removes unnecessary models.&#10;&#10;- Add migration to fix CaseEntityNote.cs&#10;&#10;- Refactored Generators in DbSeeder to be static and have public properties to facilitate model relationships.&#10;&#10;- Create Helper.cs class to hold helper methods used by various model seeders.&#10;&#10;- Add SqlHelperScripts folder to hold raw sql scripts." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

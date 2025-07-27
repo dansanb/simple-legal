@@ -5,13 +5,13 @@ namespace Core;
 
 public class AppDbContext : DbContext
 {
-    DbSet<CaseEntity> Cases { get; set; }
-    DbSet<CaseEntityRole> CaseRoles { get; set; }
-    DbSet<CaseEntityNote> CaseNotes { get; set; }
-    DbSet<CaseEntityStatusRole> CaseStatusRoles { get; set; }
-    DbSet<CasePartyTag> CasePartyTags { get; set; }
-    DbSet<PartyEntity> Parties { get; set; }
-    DbSet<PartyEntityRole> PartyRoles { get; set; }
+    public DbSet<Core.Models.CaseEntity> Cases { get; set; }
+    public DbSet<Core.Models.CaseEntityRole> CaseRoles { get; set; }
+    public DbSet<Core.Models.CaseEntityNote> CaseNotes { get; set; }
+    public DbSet<Core.Models.CaseEntityStatusRole> CaseStatusRoles { get; set; }
+    public DbSet<Core.Models.CasePartyTag> CasePartyTags { get; set; }
+    public DbSet<Core.Models.PartyEntity> Parties { get; set; }
+    public DbSet<Core.Models.PartyEntityRole> PartyRoles { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     { }

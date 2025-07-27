@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddCors();
-builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddNpgsql<AppDbContext>(
     connectionString: builder.Configuration.GetConnectionString("DefaultConnection"));
 
