@@ -14,6 +14,7 @@ public static class CaseRolesSeeder
         {
             var caseRole = new CaseEntityRole();
             caseRole.Name = role;
+            caseRole.DateCreated = Helper.GetRandomDate();
             context.Add(caseRole);
             CaseRoles.Add(caseRole);
         }

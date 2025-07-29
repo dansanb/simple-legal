@@ -1,5 +1,6 @@
 using Bogus;
 using Core.Models;
+using DbSeeder.Seeders;
 
 namespace DbSeeder.TestEntitiesGenerators;
 
@@ -13,8 +14,10 @@ public class CaseNoteGenerator : AbstractEntityGenerator<CaseEntityNote>
         int maxParagraphsPerNote = 3;
         var random = new Random();
         this._mockNote = new Faker<CaseEntityNote>()
+            .RuleFor(o => o.DateCreated, Helper.GetRandomDate())
             .RuleFor(o => o.Note, f => f.Lorem.Paragraphs(random.Next(minParagraphsPerNote, maxParagraphsPerNote + 1)));
     }
+
 
     public override CaseEntityNote Generate()
     {

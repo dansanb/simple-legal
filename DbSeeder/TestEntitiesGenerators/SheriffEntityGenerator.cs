@@ -9,6 +9,7 @@ public class SheriffEntityGenerator : AbstractPartyGenerator
     public SheriffEntityGenerator()
     {
         this._mockPartyEntity = new Faker<PartyEntity>()
+            .RuleFor(o => o.DateCreated, Helper.GetRandomDate())
             .RuleFor(o => o.Role, PartyRolesSeeder.SheriffPartyRole)
             .RuleFor(o => o.Company, f => $"{f.Address.County()} Sheriffs Department")
             .RuleFor(o => o.Email, f => f.Internet.Email())

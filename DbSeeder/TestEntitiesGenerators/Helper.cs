@@ -17,4 +17,12 @@ public static class Helper
     {
         return parties.ElementAt(Random.Next(0, parties.Count));
     }
+
+    public static DateOnly GetRandomDate()
+    {
+        var random = new Random();
+        DateTime earliest = new DateTime(2015, 1, 1);
+        int dayRange = (DateTime.Today - earliest).Days;
+        return DateOnly.FromDateTime(earliest.AddDays(random.Next(dayRange)));
+    }
 }

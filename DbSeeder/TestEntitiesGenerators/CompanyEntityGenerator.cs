@@ -15,6 +15,7 @@ public class CompanyEntityGenerator : AbstractPartyGenerator
         ]);
 
         this._mockPartyEntity = new Faker<PartyEntity>()
+            .RuleFor(o => o.DateCreated, Helper.GetRandomDate())
             .RuleFor(o => o.Role, f => f.PickRandom(possibleRoles))
             .RuleFor(o => o.Company, f => f.Company.CompanyName())
             .RuleFor(o => o.Email, f => f.Internet.Email())

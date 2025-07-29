@@ -1,4 +1,5 @@
 using Core;
+using Core.BusinessLayer;
 using Core.Models;
 
 namespace DbSeeder.Seeders;
@@ -21,6 +22,7 @@ public static class CaseSeeder
             {
                 var caseEntity = new CaseEntity();
                 caseEntity.Role = caseRole;
+                caseEntity.DateCreated = Helper.GetRandomDate();
                 caseEntity.StatusCode =
                     CaseStatusRolesSeeder.CaseStatusRoles.ElementAt(random.Next(0, CaseRolesSeeder.CaseRoles.Count));
 
@@ -56,7 +58,7 @@ public static class CaseSeeder
                 caseEntity.Parties = tags;
 
                 // give case a name of "Plaintiff v Defendant"
-                caseEntity.Name = $"{plaintiff.CaseEntity.Name} v {defendant.CaseEntity.Name}";
+                caseEntity.Name = CaseHelper.GenerateCaseName(caseEntity);
 
                 Cases.Add(caseEntity);
                 context.Add(caseEntity);
