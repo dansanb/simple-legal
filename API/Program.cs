@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
-builder.Services.AddCors();
 builder.Services.AddNpgsql<AppDbContext>(
     connectionString: builder.Configuration.GetConnectionString("DefaultConnection"));
 
@@ -19,6 +18,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
-app.UseHttpsRedirection();
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true));
 
 app.Run();

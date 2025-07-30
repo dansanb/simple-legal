@@ -19,7 +19,7 @@ public static class CaseStatusRolesSeeder
                 var statusRole = new CaseEntityStatusRole()
                 {
                     Name = code,
-                    Role = caseRole,
+                    CaseRole = caseRole,
                     DateCreated = Helper.GetRandomDate()
                 };
                 context.Add(statusRole);

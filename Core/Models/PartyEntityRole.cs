@@ -6,7 +6,7 @@ public class PartyEntityRole : BaseModel
 {
     public string Name { get; set; }
 
-    public List<PartyEntity> Persons { get; set; }
+    public List<PartyEntity> Parties { get; set; }
 
     public PartyEntityRole()
     {

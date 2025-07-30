@@ -21,7 +21,7 @@ public static class CaseSeeder
             for (int i = 0; i < random.Next(minCasesOfEachType, maxCasesOfEachType); i++)
             {
                 var caseEntity = new CaseEntity();
-                caseEntity.Role = caseRole;
+                caseEntity.CaseRole = caseRole;
                 caseEntity.DateCreated = Helper.GetRandomDate();
                 caseEntity.StatusCode =
                     CaseStatusRolesSeeder.CaseStatusRoles.ElementAt(random.Next(0, CaseRolesSeeder.CaseRoles.Count));

@@ -10,7 +10,7 @@ public class ProcessServerEntityGenerator : AbstractPartyGenerator
     {
         this._mockPartyEntity = new Faker<PartyEntity>()
             .RuleFor(o => o.DateCreated, Helper.GetRandomDate())
-            .RuleFor(o => o.Role, PartyRolesSeeder.ProcessServerPartyRole)
+            .RuleFor(o => o.PartyRole, PartyRolesSeeder.ProcessServerPartyRole)
             .RuleFor(o => o.Company, f => $"{f.Company.CompanyName()} Process Servers")
             .RuleFor(o => o.Email, f => f.Internet.Email())
             .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())

@@ -10,7 +10,7 @@ public class CourtEntityGenerator : AbstractPartyGenerator
     {
         this._mockPartyEntity = new Faker<PartyEntity>()
             .RuleFor(o => o.DateCreated, Helper.GetRandomDate())
-            .RuleFor(o => o.Role, PartyRolesSeeder.CourtPartyRole)
+            .RuleFor(o => o.PartyRole, PartyRolesSeeder.CourtPartyRole)
             .RuleFor(o => o.Company, f => $"Court of {f.Address.County()}")
             .RuleFor(o => o.Email, f => f.Internet.Email())
             .RuleFor(o => o.Phone, f => f.Phone.PhoneNumber())

@@ -14,5 +14,5 @@ public class PartyEntity : BaseModel
     public string? City { get; set; }
     public string? State { get; set; }
 
-    public PartyEntityRole Role { get; set; }
+    public PartyEntityRole PartyRole { get; set; }
 }
