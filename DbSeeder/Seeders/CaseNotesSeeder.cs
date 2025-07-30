@@ -10,7 +10,7 @@ public static class CaseNotesSeeder
     public static readonly List<CaseEntityNote> CaseNotes = new List<CaseEntityNote>();
     public static void Seed(AppDbContext context)
     {
-        int minNotesForEachCase = 7;
+        int minNotesForEachCase = 5;
         int maxNotesForEachCase = 21;
 
         var noteGenerator = new CaseNoteGenerator();

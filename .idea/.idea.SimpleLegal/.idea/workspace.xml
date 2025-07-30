@@ -10,24 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/BusinessLayer/CaseHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250729171906_ChangeToDateOnly.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250729171906_ChangeToDateOnly.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/DTO/AgGrid/AgGridFilterDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/DTO/AgGrid/AgGridOperationDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/DTO/AgGrid/AgGridSortDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/BaseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/BaseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseNotesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseNotesSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseRolesSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CaseNoteGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CaseNoteGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/Helper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/Helper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/PartySeeder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +150,7 @@
       <updated>1753468887507</updated>
       <workItem from="1753468888524" duration="45849000" />
       <workItem from="1753639387489" duration="12773000" />
-      <workItem from="1753808607110" duration="3122000" />
+      <workItem from="1753808607110" duration="5824000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -272,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753655451786</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="- Changed DateTime to DateOnly for all models (BaseModel.cs)&#10;&#10;- Created GetRandomDate() helper function to generate random dates during record seeding.&#10;&#10;- Created BusinessLayer namespace to hold business-specific logic cases.&#10;&#10;- Created CaseHelper.cs to assist with case-specific helper functions, such as GenerateCaseName(example: Amazon V Louis)">
+      <option name="closed" value="true" />
+      <created>1753812155593</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753812155593</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +297,8 @@
     <MESSAGE value="- Add NuGet packages to support aspnet-codegenerator.&#10;&#10;- Make DbSet properties in AppDbContext.cs public.&#10;&#10;- Add DbSet model properties to use full name to make aspnet-codegenerator happy." />
     <MESSAGE value="- Generate Controller classes using aspnet-codegenerator tool:&#10;&#10;- CaseEntityController.cs&#10;- CaseEntityNoteController.cs&#10;- CaseEntityRoleController.cs&#10;- CaseEntityStatusRoleController.cs&#10;- CasePartyTagController.cs&#10;- PartyEntityController.cs&#10;- PartyEntityRoleController.cs" />
     <MESSAGE value="- Fixed Controllers generated by aspnet-codegenerator. Previous controllers were not generated using the -api flag." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed Controllers generated by aspnet-codegenerator. Previous controllers were not generated using the -api flag." />
+    <MESSAGE value="- Changed DateTime to DateOnly for all models (BaseModel.cs)&#10;&#10;- Created GetRandomDate() helper function to generate random dates during record seeding.&#10;&#10;- Created BusinessLayer namespace to hold business-specific logic cases.&#10;&#10;- Created CaseHelper.cs to assist with case-specific helper functions, such as GenerateCaseName(example: Amazon V Louis)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Changed DateTime to DateOnly for all models (BaseModel.cs)&#10;&#10;- Created GetRandomDate() helper function to generate random dates during record seeding.&#10;&#10;- Created BusinessLayer namespace to hold business-specific logic cases.&#10;&#10;- Created CaseHelper.cs to assist with case-specific helper functions, such as GenerateCaseName(example: Amazon V Louis)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

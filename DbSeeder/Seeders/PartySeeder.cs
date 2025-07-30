@@ -17,8 +17,8 @@ public static class PartySeeder
     public static void Seed(AppDbContext context)
     {
         var random = new Random();
-        int minPartiesOfEachType = 8;
-        int maxPartiesOfEachType = 15;
+        int minPartiesOfEachType = 100;
+        int maxPartiesOfEachType = 200;
 
         var courtGenerator = new CourtEntityGenerator();
         var processServerGenerator = new ProcessServerEntityGenerator();

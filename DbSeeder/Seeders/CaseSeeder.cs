@@ -11,8 +11,8 @@ public static class CaseSeeder
 
     public static void Seed(AppDbContext context)
     {
-        int minCasesOfEachType = 5;
-        int maxCasesOfEachType = 10;
+        int minCasesOfEachType = 500;
+        int maxCasesOfEachType = 1000;
         var random = new Random();
 
         // create "random" amount of each case type

@@ -8,7 +8,7 @@ public static class CaseRolesSeeder
     public static readonly List<CaseEntityRole> CaseRoles = new List<CaseEntityRole>();
     public static void Seed(AppDbContext context)
     {
-        string[] roles = { "Family Law", "Small Claims", "Criminal", "Property Law" };
+        string[] roles = { "Family Law", "Small Claims", "Criminal", "Property Law", "Personal Injury", "Collections" };
 
         foreach (var role in roles)
         {
