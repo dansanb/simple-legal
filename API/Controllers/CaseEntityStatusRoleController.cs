@@ -78,12 +78,14 @@ namespace API.Controllers
         // POST: api/CaseEntityStatusRole
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<CaseEntityStatusRole>> PostCaseEntityStatusRole(CaseEntityStatusRole caseEntityStatusRole)
+        public async Task<ActionResult<CaseEntityStatusRole>> PostCaseEntityStatusRole(
+            CaseEntityStatusRole caseEntityStatusRole)
         {
             _context.CaseStatusRoles.Add(caseEntityStatusRole);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCaseEntityStatusRole", new { id = caseEntityStatusRole.Id }, caseEntityStatusRole);
+            return CreatedAtAction("GetCaseEntityStatusRole", new { id = caseEntityStatusRole.Id },
+                caseEntityStatusRole);
         }
 
         // DELETE: api/CaseEntityStatusRole/5
@@ -113,10 +115,16 @@ namespace API.Controllers
             var query = _context.CaseStatusRoles.AsQueryable();
             if (gom == null)
             {
+                var sort = new AgGridSortDto()
+                {
+                    ColId = "caseRole.name",
+                    Sort = "asc"
+                };
                 gom = new AgGridOperationDto()
                 {
                     StartRow = 0,
-                    EndRow = 5,
+                    EndRow = 100,
+                    SortModel = new[] { sort }
                 };
             }
 
@@ -151,6 +159,12 @@ namespace API.Controllers
                                 case "endsWith":
                                     modelResult = $"{colName}.EndsWith(@{values.Count})";
                                     values.Add(model.Filter);
+                                    break;
+                                case "blank":
+                                    modelResult = $"{colName}.Length == 0";
+                                    break;
+                                case "notBlank":
+                                    modelResult = $"{colName}.Length != 0";
                                     break;
                             }
 
@@ -227,10 +241,10 @@ namespace API.Controllers
 
                     if (!string.IsNullOrWhiteSpace(f.Value.LogicOperator))
                     {
-                        tmp = getConditionFromModel(f.Key, f.Value.Condition1, conditionValues);
+                        tmp = getConditionFromModel(f.Key, f.Value.Conditions[0], conditionValues);
                         condition = tmp;
 
-                        tmp = getConditionFromModel(f.Key, f.Value.Condition2, conditionValues);
+                        tmp = getConditionFromModel(f.Key, f.Value.Conditions[1], conditionValues);
                         condition = $"{condition} {f.Value.LogicOperator} {tmp}";
                     }
                     else
@@ -250,7 +264,7 @@ namespace API.Controllers
                 }
             }
 
-            if (gom.FilterModel != null)
+            if (gom.SortModel != null)
             {
                 foreach (var s in gom.SortModel)
                 {

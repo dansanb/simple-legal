@@ -10,24 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f597bf59-9c4e-4eca-9afa-3eb386d09d0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250730061400_RenameModelProperties.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Migrations/20250730061400_RenameModelProperties.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/DTO/AgGrid/AgGridFilterConditionDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleLegal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/CaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/CaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/CaseEntityStatusRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/CaseEntityStatusRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/PartyEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/PartyEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Models/PartyEntityRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/DTO/AgGrid/AgGridFilterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/DTO/AgGrid/AgGridFilterDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +44,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/73818f6b3d53151bdbd8dd951124e66e5e96c4f2c9dfa64e772927864abfc61c/Lorem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a0b45f29f34f594814a7b1fbc25fe5ef3c18257956ed4f4fbfa68717db58/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de397da5eaca13f9b8a34322cb7fca0ed87e79551ad58212a28438ebcb0f7ac/RouteAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/API/Controllers/CaseEntityStatusRoleController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/API/Controllers/CaseEntityStatusRoleController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/Core/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/Core/Models/CaseEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/Core/Models/CaseEntityStatusRole.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/Core/Models/PartyEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/Seeders/CaseSeeder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/Seeders/CaseStatusRolesSeeder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/TestEntitiesGenerators/CompanyEntityGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/TestEntitiesGenerators/CourtEntityGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/TestEntitiesGenerators/LawFirmEntityGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/TestEntitiesGenerators/PersonEntityGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/TestEntitiesGenerators/ProcessServerEntityGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/daniel/RiderProjects/SimpleLegal/DbSeeder/TestEntitiesGenerators/SheriffEntityGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -71,29 +73,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.API: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.DbSeeder.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.API: http.executor": "Run",
+    ".NET Project.DbSeeder.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.API: http">
     <configuration name="DbSeeder" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -158,7 +160,7 @@
       <updated>1753468887507</updated>
       <workItem from="1753468888524" duration="45849000" />
       <workItem from="1753639387489" duration="12773000" />
-      <workItem from="1753808607110" duration="12212000" />
+      <workItem from="1753808607110" duration="19742000" />
     </task>
     <task id="LOCAL-00001" summary="Create CORE project which contains the database models and context. Created models for a basic legal case management system.&#10;&#10;Create API project which will handle the RESTful Web API and backend application logic.">
       <option name="closed" value="true" />
@@ -288,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753843173368</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="- Add migration to rename 'Role' properties in models.&#10;&#10;- Renamed Role properties in model files to make more sense (ie: 'Role' to 'CaseRole')&#10;&#10;- changed CaseEntityStatusRole api endpoint to 'case-status-roles'&#10;&#10;- set CORS to allow all for now during development.">
+      <option name="closed" value="true" />
+      <created>1753892865942</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753892865942</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +325,8 @@
     <MESSAGE value="- Fixed Controllers generated by aspnet-codegenerator. Previous controllers were not generated using the -api flag." />
     <MESSAGE value="- Changed DateTime to DateOnly for all models (BaseModel.cs)&#10;&#10;- Created GetRandomDate() helper function to generate random dates during record seeding.&#10;&#10;- Created BusinessLayer namespace to hold business-specific logic cases.&#10;&#10;- Created CaseHelper.cs to assist with case-specific helper functions, such as GenerateCaseName(example: Amazon V Louis)" />
     <MESSAGE value="- Added ag-grid DTO's to work with the javascript grid component.&#10;&#10;- Implement GetCasesPaged() api endpoint to handle ag-grid's 'infinite' dataRow model.&#10;&#10;- Increased the number of records being seeded." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added ag-grid DTO's to work with the javascript grid component.&#10;&#10;- Implement GetCasesPaged() api endpoint to handle ag-grid's 'infinite' dataRow model.&#10;&#10;- Increased the number of records being seeded." />
+    <MESSAGE value="- Add migration to rename 'Role' properties in models.&#10;&#10;- Renamed Role properties in model files to make more sense (ie: 'Role' to 'CaseRole')&#10;&#10;- changed CaseEntityStatusRole api endpoint to 'case-status-roles'&#10;&#10;- set CORS to allow all for now during development." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add migration to rename 'Role' properties in models.&#10;&#10;- Renamed Role properties in model files to make more sense (ie: 'Role' to 'CaseRole')&#10;&#10;- changed CaseEntityStatusRole api endpoint to 'case-status-roles'&#10;&#10;- set CORS to allow all for now during development." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -332,6 +343,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs</url>
+          <line>236</line>
+          <properties documentPath="$PROJECT_DIR$/API/Controllers/CaseEntityStatusRoleController.cs" containingFunctionPresentation="Method 'GetCasesPaged'">
+            <startOffsets>
+              <option value="9460" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9494" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

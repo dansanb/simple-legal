@@ -4,9 +4,8 @@ namespace API.DTO.AgGrid;
 
 public class AgGridFilterDto
 {
-    public AgGridFilterDto? Condition1 { get; set; }
-    public AgGridFilterDto? Condition2 { get; set; }
-
+    // public AgGridFilterDto? Condition1 { get; set; }
+    // public AgGridFilterDto? Condition2 { get; set; }
     [JsonPropertyName("operator")]
     public string? LogicOperator { get; set; }
     public string? Type { get; set; }
@@ -15,4 +14,6 @@ public class AgGridFilterDto
     public string? DateFrom { get; set; }
     public string? DateTo { get; set; }
     public string? FilterType { get; set; }
+
+    public AgGridFilterDto[]? Conditions { get; set; }
 }
